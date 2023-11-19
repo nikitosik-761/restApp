@@ -1,10 +1,7 @@
 package restApplication.rest.models;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonView;
 import jakarta.persistence.*;
 import lombok.*;
-import restApplication.rest.views.Views;
 
 import java.time.LocalDateTime;
 
@@ -27,7 +24,6 @@ public class Message {
     private String text;
 
     @Column(name = "date", updatable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     //@JsonView(Views.FullMessage.class)
     private LocalDateTime creationDate;
 
