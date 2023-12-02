@@ -26,10 +26,11 @@ class MessageServiceTest {
     private MessageRepository messageRepository;
 
     private MessageService messageService;
-    private final MessageDTOMapper messageDTOMapper = new MessageDTOMapper();
+    private  MessageDTOMapper messageDTOMapper;
 
     @BeforeEach
     void setUp() {
+        messageDTOMapper = new MessageDTOMapper();
         messageService = new MessageService(messageRepository, messageDTOMapper);
     }
 
